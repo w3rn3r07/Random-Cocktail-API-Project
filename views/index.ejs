@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Random Cocktail</title>
+</head>
+<body>
+    <nav class="navbar container">
+        <h3>Nav</h3>
+    </nav>
+    <div class="trending container">
+        <h3>Trending</h3>
+        <p>Expresso Martini</p>
+        <p>Classic Mojito</p>
+        <p>Blue Lagoon</p>
+        <p>Pina Colada</p>
+    </div>
+    <div class="posts container">
+        <h1>POSTS</h1>
+        <hr>
+        <div class="post card">
+            <h2>Category</h2>
+            <img src="<%= content.drinks[feedIndexArr[0]].strDrinkThumb %>" alt="image of a cocktail"><br>
+            <p><%= content.drinks[feedIndexArr[0]].strDrink %></p>
+            <button>Like</button>
+            <p>3049 likes</p>
+        </div>
+        <hr>
+        <div class="post card">
+            <h2>Category</h2>
+            <img src="<%= content.drinks[feedIndexArr[1]].strDrinkThumb %>" alt="image of a cocktail"><br>
+            <p><%= content.drinks[feedIndexArr[1]].strDrink %></p>
+            <button>Like</button>
+            <p>3049 likes</p>
+        </div>
+        <hr>
+        <div class="post card">
+            <h2>Category</h2>
+            <img src="<%= content.drinks[feedIndexArr[2]].strDrinkThumb %>" alt="image of a cocktail"><br>
+            <p><%= content.drinks[feedIndexArr[2]].strDrink %></p>
+            <button>Like</button>
+            <p>3049 likes</p>
+        </div>
+    </div>
+    <div class="extras container">
+        <h3>Extras</h3>
+        <p>For You</p>
+        <p>Discover</p>
+        <p>Saved Drinks</p>
+    </div>
+</body>
+</html>

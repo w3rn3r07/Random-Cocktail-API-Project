@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    background-color: aliceblue;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 0.2fr;
+    grid-template-rows: 0.05fr 1fr;
+    gap: 20px;
+}
+.container{
+    background-color: white;
+    border: solid black 1px;
+}
+.navbar{
+    grid-column: span 4;
+    border: solid black 1px;
+}
+.posts.container{
+    text-align: center;
+}
+.card{
+    background-color: azure;
+}
+.post.card{
+    margin-left: 30em;
+    margin-right: 30em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+}
