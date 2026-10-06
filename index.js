@@ -18,7 +18,6 @@ function feedGenerator(dLength){
             indexArr.push(index);
         }
     }
-    console.log(indexArr);
     return indexArr;
 }
 
@@ -26,7 +25,6 @@ app.get("/", async (req,res) => {
     try{
         const result = await axios.get(API_URL+"/search.php?s=margarita");
         const drinks = result.data.drinks;
-        // console.log("drinks : ", drinks)
         let returnValue = feedGenerator(drinks.length);
         res.render("index.ejs", {content: result.data, feedIndexArr:returnValue} );
     }catch(error){
