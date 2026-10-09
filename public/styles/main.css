@@ -33,3 +33,11 @@ img{
     width: 400px;
     object-fit: cover;
 }
+.read{
+    height: 100vh;
+}
+/* .details{
+    display: flex;
+    justify-self: center;
+    align-self: center;
+} */

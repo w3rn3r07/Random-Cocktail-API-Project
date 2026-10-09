@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/main.css">
-    <title>Random Cocktail</title>
-</head>
-<body>
-    <nav class="navbar container">
-        <h3>Nav</h3>
-    </nav>
+<%- include("partials/header.ejs") %>
     <div class="trending container">
         <h3>Trending</h3>
         <p>Expresso Martini</p>
@@ -26,7 +15,7 @@
             <h4>Category : <%= content.drinks[feedIndexArr[0]].strCategory %></h4>
             <h4>Alcoholic : <%= content.drinks[feedIndexArr[0]].strAlcoholic %></h4>
             <h4>Glass Type : <%= content.drinks[feedIndexArr[0]].strGlass %></h4>
-            <button>Read More</button>
+            <a href="/drink/<%= feedIndexArr[0] %>"><button>Read More</button></a>
         </div>
         <hr>
         <div class="post card">
@@ -35,7 +24,7 @@
             <h4>Category : <%= content.drinks[feedIndexArr[1]].strCategory %></h4>
             <h4>Alcoholic : <%= content.drinks[feedIndexArr[1]].strAlcoholic %></h4>
             <h4>Glass Type : <%= content.drinks[feedIndexArr[1]].strGlass %></h4>
-            <button>Read More</button>
+            <a href="/drink/<%= feedIndexArr[1] %>"><button>Read More</button></a>
         </div>
         <hr>
         <div class="post card">
@@ -44,7 +33,7 @@
             <h4>Category : <%= content.drinks[feedIndexArr[2]].strCategory %></h4>
             <h4>Alcoholic : <%= content.drinks[feedIndexArr[2]].strAlcoholic %></h4>
             <h4>Glass Type : <%= content.drinks[feedIndexArr[2]].strGlass %></h4>
-            <button>Read More</button>
+            <a href="/drink/<%= feedIndexArr[2] %>"><button>Read More</button></a>
         </div>
     </div>
     <div class="extras container">
@@ -53,5 +42,4 @@
         <p>Discover</p>
         <p>Saved Drinks</p>
     </div>
-</body>
-</html>
+<%- include("partials/footer.ejs") %>

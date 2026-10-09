@@ -21,10 +21,22 @@ function feedGenerator(dLength){
     return indexArr;
 }
 
+app.get("/drink/:id", async (req,res) => {
+    try {
+        const result = await axios.get(API_URL+"/search.php?s=margarita");
+        // const drinks = result.data.drinks;
+        res.render("details.ejs", {content: result.data, feedIndexArr:req.params.id});
+    } catch (error) {
+        console.log(error.response);
+        res.status(500);
+    }
+})
+
 app.get("/", async (req,res) => {
     try{
         const result = await axios.get(API_URL+"/search.php?s=margarita");
         const drinks = result.data.drinks;
+        console.log(drinks)
         let returnValue = feedGenerator(drinks.length);
         res.render("index.ejs", {content: result.data, feedIndexArr:returnValue} );
     }catch(error){

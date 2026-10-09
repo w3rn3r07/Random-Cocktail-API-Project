@@ -1,0 +1,30 @@
+<%- include("partials/header.ejs") %>
+    <div class="read trending container">
+            <h3>Trending</h3>
+            <p>Expresso Martini</p>
+            <p>Classic Mojito</p>
+            <p>Blue Lagoon</p>
+            <p>Pina Colada</p>
+    </div>
+    <div class="read posts container">
+        <div class="details">
+            <h1>Full Details</h1>
+            <div class="post card">
+                <img src="<%= content.drinks[feedIndexArr].strDrinkThumb %>" alt="image of a cocktail"><br>
+                <h2><%= content.drinks[feedIndexArr].strDrink %></h2>
+                <h2>Category : <%= content.drinks[feedIndexArr].strCategory %></h2>
+                <h2>Alcoholic : <%= content.drinks[feedIndexArr].strAlcoholic %></h2>
+                <h2>Glass type : <%= content.drinks[feedIndexArr].strGlass %></h2>
+                <h2>Ingredients :</h2>
+                <h2>Recipe:</h2>
+                <p><%= content.drinks[feedIndexArr].strInstructions %></p>
+            </div>
+        </div>
+    </div>
+    <div class="read extras container">
+        <h3>Extras</h3>
+        <p>For You</p>
+        <p>Discover</p>
+        <p>Saved Drinks</p>
+    </div>
+<%- include("partials/footer.ejs") %>
