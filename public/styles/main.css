@@ -41,3 +41,12 @@ img{
     justify-self: center;
     align-self: center;
 } */
+.specs{
+    width: 400px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+}
+.specs > p{
+    font-weight: bold;
+}
