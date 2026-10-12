@@ -16,18 +16,34 @@
                     <p>Drink Type : <br> <%= content.drinks[feedIndexArr].strAlcoholic %></p>
                     <p>Glass Type : <br> <%= content.drinks[feedIndexArr].strGlass %></p>
                 </div>
-                <div>
+                <div class="steps">
                     <h2>Ingredients :</h2>
-                    <% for(let i=1; i<16; i++){ %>
-                        <%let value = "strIngredient"+i%>
-                        <%if (!(content.drinks[feedIndexArr][value] === null)){%>
-                            <%console.log(content.drinks[feedIndexArr][value]);%>
-                            <li><%=content.drinks[feedIndexArr][value]%></li>
-                        <%}%>
-                    <%};%>
+                    <ul>
+                        <% for(let i=1; i<16; i++){ %>
+                            <%let ingredValue = "strIngredient"+i%>
+                            <%let measureValue = "strMeasure"+i%>
+                            <%if (!(content.drinks[feedIndexArr][ingredValue] === null)){%>
+                                <%console.log(content.drinks[feedIndexArr][ingredValue]);%>
+                                <li><%=content.drinks[feedIndexArr][measureValue]%> of <%=content.drinks[feedIndexArr][ingredValue]%></li>
+                            <%}%>
+                        <%};%>
+                    </ul>
+                    <h2>Recipe:</h2>
+                    <%console.log(content.drinks[feedIndexArr].strInstructions.length)%>
+                    <%let recipeArr = content.drinks[feedIndexArr].strInstructions%>
+                    <%let lineArr = "";%>
+                    <ol>
+                        <%for(let j=0; j<recipeArr.length; j++){%> 
+                            <%if (recipeArr[j] === "."){%>
+                                <%console.log(lineArr)%>
+                                <li><%=lineArr%></li>
+                                <%lineArr = ""%>
+                            <%} else {%>
+                                <%lineArr= lineArr+recipeArr[j]%>
+                            <%}%>
+                        <%};%>
+                    </ol>
                 </div>
-                <h2>Recipe:</h2>
-                <p><%= content.drinks[feedIndexArr].strInstructions %></p>
             </div>
         </div>
     </div>
