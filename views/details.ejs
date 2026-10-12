@@ -8,14 +8,24 @@
     </div>
     <div class="read posts container">
         <div class="details">
-            <h1>Full Details</h1>
+            <h1><%= content.drinks[feedIndexArr].strDrink %></h1>
             <div class="post card">
                 <img src="<%= content.drinks[feedIndexArr].strDrinkThumb %>" alt="image of a cocktail"><br>
-                <h2><%= content.drinks[feedIndexArr].strDrink %></h2>
-                <h2>Category : <%= content.drinks[feedIndexArr].strCategory %></h2>
-                <h2>Alcoholic : <%= content.drinks[feedIndexArr].strAlcoholic %></h2>
-                <h2>Glass type : <%= content.drinks[feedIndexArr].strGlass %></h2>
-                <h2>Ingredients :</h2>
+                <div class="specs">
+                    <p>Category : <br> <%= content.drinks[feedIndexArr].strCategory %></p>
+                    <p>Drink Type : <br> <%= content.drinks[feedIndexArr].strAlcoholic %></p>
+                    <p>Glass Type : <br> <%= content.drinks[feedIndexArr].strGlass %></p>
+                </div>
+                <div>
+                    <h2>Ingredients :</h2>
+                    <% for(let i=1; i<16; i++){ %>
+                        <%let value = "strIngredient"+i%>
+                        <%if (!(content.drinks[feedIndexArr][value] === null)){%>
+                            <%console.log(content.drinks[feedIndexArr][value]);%>
+                            <li><%=content.drinks[feedIndexArr][value]%></li>
+                        <%}%>
+                    <%};%>
+                </div>
                 <h2>Recipe:</h2>
                 <p><%= content.drinks[feedIndexArr].strInstructions %></p>
             </div>
