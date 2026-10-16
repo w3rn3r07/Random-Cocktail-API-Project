@@ -23,19 +23,16 @@
                             <%let ingredValue = "strIngredient"+i%>
                             <%let measureValue = "strMeasure"+i%>
                             <%if (!(content.drinks[feedIndexArr][ingredValue] === null)){%>
-                                <%console.log(content.drinks[feedIndexArr][ingredValue]);%>
                                 <li><%=content.drinks[feedIndexArr][measureValue]%> of <%=content.drinks[feedIndexArr][ingredValue]%></li>
                             <%}%>
                         <%};%>
                     </ul>
                     <h2>Recipe:</h2>
-                    <%console.log(content.drinks[feedIndexArr].strInstructions.length)%>
                     <%let recipeArr = content.drinks[feedIndexArr].strInstructions%>
                     <%let lineArr = "";%>
                     <ol>
                         <%for(let j=0; j<recipeArr.length; j++){%> 
                             <%if (recipeArr[j] === "."){%>
-                                <%console.log(lineArr)%>
                                 <li><%=lineArr%></li>
                                 <%lineArr = ""%>
                             <%} else {%>
