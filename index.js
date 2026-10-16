@@ -24,11 +24,10 @@ function feedGenerator(dLength){
 app.get("/drink/:id", async (req,res) => {
     try {
         const result = await axios.get(API_URL+"/search.php?s=margarita");
-        // const drinks = result.data.drinks;
         res.render("details.ejs", {content: result.data, feedIndexArr:req.params.id});
     } catch (error) {
-        console.log(error.response);
-        res.status(500);
+        console.log(error.message);
+        res.status(500).send("Something went wrong. Please Try Again");
     }
 })
 
@@ -36,12 +35,11 @@ app.get("/", async (req,res) => {
     try{
         const result = await axios.get(API_URL+"/search.php?s=margarita");
         const drinks = result.data.drinks;
-        console.log(drinks)
         let returnValue = feedGenerator(drinks.length);
         res.render("index.ejs", {content: result.data, feedIndexArr:returnValue} );
     }catch(error){
-        console.log(error.response);
-        res.status(500);
+        console.log(error.message);
+        res.status(500).send("Something went wrong. Please Try Again");
     }
 });
 
