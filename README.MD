@@ -4,6 +4,12 @@ A mini project developed as part of the App Brewery London Fullstack Course to p
 
 Cocktail Feed is a cocktail discovery website that displays a selection of random cocktails on the homepage. Users can browse the available cocktails, select one they like, and view its full recipe, including ingredients and preparation instructions.
 
+## Live Demo 🌐
+
+Try it here: [https://your-app.onrender.com](https://your-app.onrender.com)
+
+Hosted on Render's free tier, so the first load after a period of inactivity can take up to a minute while the server wakes up.
+
 ## Technologies Used
 
 - Node.js
