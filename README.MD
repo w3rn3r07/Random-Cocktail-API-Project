@@ -6,7 +6,7 @@ Cocktail Feed is a cocktail discovery website that displays a selection of rando
 
 ## Live Demo 🌐
 
-Try it here: [https://your-app.onrender.com](https://your-app.onrender.com)
+Try it here: [https://random-cocktail-api-project.onrender.com/](https://random-cocktail-api-project.onrender.com/)
 
 Hosted on Render's free tier, so the first load after a period of inactivity can take up to a minute while the server wakes up.
 
